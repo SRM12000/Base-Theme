@@ -1,0 +1,3 @@
+[environments.development]
+store = "https://test-store-genesis.myshopify.com/"
+
