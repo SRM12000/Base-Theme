@@ -3,9 +3,6 @@
   "name": "Custom Grid Section",
   "tag": "section",
   "class": "grid-section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-    },
   "settings": [
     {
       "type": "text",
@@ -135,6 +132,43 @@
           "label": "Bottom Right Image Link"
         }
       ]
+    },
+    {
+      "type": "style_4",
+      "name": "Left Stack Right Banner",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Top Left Image"
+        },
+        {
+          "type": "url",
+          "id": "link_1",
+          "label": "Top Left Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Bottom Left Image"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "Bottom Left Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Right Image"
+        },
+        {
+          "type": "url",
+          "id": "link_3",
+          "label": "Right Image Link"
+        }
+      ]
     }
   ],
   "presets": [
@@ -151,108 +185,139 @@
 {% endschema %}
 
 <style>
-.grid-section {
-  padding: var(--section-padding, 60px 20px);
-}
-
-.grid-section .padding-sm {
-  --section-padding: 30px 20px;
-}
-
-.grid-section .padding-md {
-  --section-padding: 60px 20px;
-}
-
-.grid-section .padding-lg {
-  --section-padding: 90px 20px;
-}
-
-.grid-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.grid-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-  /* Style 1 - Two Banner Grid (930x620) */
-.grid-style-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1880px;
-  margin: 10px auto;
-}
-
-.grid-style-1 .banner-link {
-  aspect-ratio: 930/620;
-}
-
-/* Style 2 - Three Banner Grid (640x640) */
-.grid-style-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1960px;
-  margin: 10px auto;
-}
-
-.grid-style-2 .banner-link {
-  aspect-ratio: 1/1;
-}
-
-/* Style 3 - Asymmetric Grid (930x930 left, 930x455 right) */
-.grid-style-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1880px;
-  margin: 10px auto;
-}
-
-.grid-style-3 .left-banner {
-  grid-row: span 2;
-}
-
-.grid-style-3 .left-banner .banner-link {
-  aspect-ratio: 1/1;
-}
-
-.grid-style-3 .right-stack {
-  display: grid;
-  gap: 20px;
-}
-
-.grid-style-3 .right-stack .banner-link {
-  aspect-ratio: 930/455;
-}
-
-.banner-link {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media screen and (max-width: 767px) {
-  .grid-style-1,
-  .grid-style-2,
-  .grid-style-3 {
-    grid-template-columns: 1fr;
-  }
-  
-  .grid-style-3 .left-banner {
-    grid-row: auto;
-  }
-}
+    .grid-section {
+        padding: var(--section-padding, 60px 20px);
+      }
+      
+      .grid-section .padding-sm {
+        --section-padding: 30px 20px;
+      }
+      
+      .grid-section .padding-md {
+        --section-padding: 60px 20px;
+      }
+      
+      .grid-section .padding-lg {
+        --section-padding: 90px 20px;
+      }
+      
+      .grid-container {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .grid-heading {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      
+      /* Style 1 - Two Banner Grid (930x620) */
+      .grid-style-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 1880px;
+        margin: 10px auto;
+      }
+      
+      .grid-style-1 .banner-link {
+        aspect-ratio: 930/620;
+      }
+      
+      /* Style 2 - Three Banner Grid (640x640) */
+      .grid-style-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1960px;
+        margin: 10px auto;
+      }
+      
+      .grid-style-2 .banner-link {
+        aspect-ratio: 1/1;
+      }
+      
+      /* Style 3 - Asymmetric Grid */
+      .grid-style-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 1880px;
+        margin: 10px auto;
+      }
+      
+      .grid-style-3 .left-banner {
+        grid-row: span 2;
+      }
+      
+      .grid-style-3 .left-banner .banner-link {
+        aspect-ratio: 1/1;
+      }
+      
+      .grid-style-3 .right-stack {
+        display: grid;
+        gap: 20px;
+      }
+      
+      .grid-style-3 .right-stack .banner-link {
+        aspect-ratio: 930/455;
+      }
+      
+      /* Style 4 - Left Stack Right Banner (Adjusted) */
+      .grid-style-4 {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Adjusted ratio to match visual proportions */
+        gap: 20px;
+        max-width: 1880px;
+        margin: 10px auto;
+      }
+      
+      .grid-style-4 .left-stack {
+        display: grid;
+        gap: 20px;
+      }
+      
+      .grid-style-4 .left-stack .banner-link {
+        aspect-ratio: 930/445; /* Adjusted to maintain proportion with other grids */
+      }
+      
+      .grid-style-4 .right-banner .banner-link {
+        aspect-ratio: 930/620; /* Matched with style_1 proportions */
+      }
+      
+      /* Common styles */
+      .banner-link {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .banner-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Responsive adjustments */
+      @media screen and (max-width: 767px) {
+        .grid-style-1,
+        .grid-style-2,
+        .grid-style-3,
+        .grid-style-4 {
+          grid-template-columns: 1fr;
+        }
+        
+        .grid-style-3 .left-banner {
+          grid-row: auto;
+        }
+        
+        .grid-style-4 .left-stack,
+        .grid-style-4 .right-banner {
+          max-width: 100%;
+        }
+      }
 </style>
 
 <div class="grid-section {{ section.settings.section_padding }}">
@@ -276,7 +341,14 @@
                 }}
               </a>
             {% else %}
-              {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-image placeholder' }}
+              <img 
+                src="https://dummyimage.com/930x620/808080/000000.jpg&text=+930+x+620"
+                alt="Placeholder image"
+                class="banner-image"
+                loading="lazy"
+                width="930"
+                height="620"
+              />
             {% endif %}
 
             {% if block.settings.image_2 %}
@@ -290,7 +362,14 @@
                 }}
               </a>
             {% else %}
-              {{ 'lifestyle-2' | placeholder_svg_tag: 'banner-image placeholder' }}
+              <img 
+                src="https://dummyimage.com/930x620/808080/000000.jpg&text=+930+x+620"
+                alt="Placeholder image"
+                class="banner-image"
+                loading="lazy"
+                width="930"
+                height="620"
+              />
             {% endif %}
           </div>
 
@@ -307,7 +386,14 @@
                 }}
               </a>
             {% else %}
-              {{ 'collection-1' | placeholder_svg_tag: 'banner-image placeholder' }}
+              <img 
+                src="https://dummyimage.com/640x640/808080/000000.jpg&text=+640+x+640"
+                alt="Placeholder image"
+                class="banner-image"
+                loading="lazy"
+                width="640"
+                height="640"
+              />
             {% endif %}
 
             {% if block.settings.image_2 %}
@@ -321,7 +407,14 @@
                 }}
               </a>
             {% else %}
-              {{ 'collection-2' | placeholder_svg_tag: 'banner-image placeholder' }}
+              <img 
+                src="https://dummyimage.com/640x640/808080/000000.jpg&text=+640+x+640"
+                alt="Placeholder image"
+                class="banner-image"
+                loading="lazy"
+                width="640"
+                height="640"
+              />
             {% endif %}
 
             {% if block.settings.image_3 %}
@@ -335,7 +428,14 @@
                 }}
               </a>
             {% else %}
-              {{ 'collection-3' | placeholder_svg_tag: 'banner-image placeholder' }}
+              <img 
+                src="https://dummyimage.com/640x640/808080/000000.jpg&text=+640+x+640"
+                alt="Placeholder image"
+                class="banner-image"
+                loading="lazy"
+                width="640"
+                height="640"
+              />
             {% endif %}
           </div>
 
@@ -353,7 +453,14 @@
                   }}
                 </a>
               {% else %}
-                {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-image placeholder' }}
+                <img 
+                  src="https://dummyimage.com/930x930/808080/000000.jpg&text=+930+x+930"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="930"
+                  height="930"
+                />
               {% endif %}
             </div>
 
@@ -369,7 +476,14 @@
                   }}
                 </a>
               {% else %}
-                {{ 'collection-1' | placeholder_svg_tag: 'banner-image placeholder' }}
+                <img 
+                  src="https://dummyimage.com/930x455/808080/000000.jpg&text=+930+x+455"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="930"
+                  height="455"
+                />
               {% endif %}
 
               {% if block.settings.image_3 %}
@@ -383,7 +497,84 @@
                   }}
                 </a>
               {% else %}
-                {{ 'collection-2' | placeholder_svg_tag: 'banner-image placeholder' }}
+                <img 
+                  src="https://dummyimage.com/930x455/808080/000000.jpg&text=+930+x+455"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="930"
+                  height="455"
+                />
+              {% endif %}
+            </div>
+          </div>
+
+        {% when 'style_4' %}
+          <div class="grid-style-4" {{ block.shopify_attributes }}>
+            <div class="left-stack">
+              {% if block.settings.image_1 %}
+                <a href="{{ block.settings.link_1 }}" class="banner-link">
+                  {{ block.settings.image_1 | image_url: width: 712, height: 340, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 712,
+                    height: 340,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 712px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/712x340/808080/000000.jpg&text=+712+x+340"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="712"
+                  height="340"
+                />
+              {% endif %}
+
+              {% if block.settings.image_2 %}
+                <a href="{{ block.settings.link_2 }}" class="banner-link">
+                  {{ block.settings.image_2 | image_url: width: 712, height: 340, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 712,
+                    height: 340,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 712px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/712x340/808080/000000.jpg&text=+712+x+340"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="712"
+                  height="340"
+                />
+              {% endif %}
+            </div>
+
+            <div class="right-banner">
+              {% if block.settings.image_3 %}
+                <a href="{{ block.settings.link_3 }}" class="banner-link">
+                  {{ block.settings.image_3 | image_url: width: 1068, height: 700, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 1068,
+                    height: 700,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 1068px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/1068x700/808080/000000.jpg&text=+1068+x+700"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="1068"
+                  height="700"
+                />
               {% endif %}
             </div>
           </div>
