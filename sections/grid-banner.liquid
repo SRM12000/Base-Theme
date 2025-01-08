@@ -169,6 +169,63 @@
           "label": "Right Image Link"
         }
       ]
+    },
+    {
+      "type": "style_5",
+      "name": "Five Grid Layout",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Left Top Image"
+        },
+        {
+          "type": "url",
+          "id": "link_1",
+          "label": "Left Top Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Left Bottom Image"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "Left Bottom Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Center Image"
+        },
+        {
+          "type": "url",
+          "id": "link_3",
+          "label": "Center Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Right Top Image"
+        },
+        {
+          "type": "url",
+          "id": "link_4",
+          "label": "Right Top Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_5",
+          "label": "Right Bottom Image"
+        },
+        {
+          "type": "url",
+          "id": "link_5",
+          "label": "Right Bottom Image Link"
+        }
+      ]
     }
   ],
   "presets": [
@@ -205,6 +262,7 @@
         max-width: 1800px;
         margin: 0 auto;
         padding: 0 20px;
+        overflow: hidden;
       }
       
       .grid-heading {
@@ -217,7 +275,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        max-width: 1880px;
         margin: 10px auto;
       }
       
@@ -230,7 +287,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        max-width: 1960px;
         margin: 10px auto;
       }
       
@@ -243,25 +299,23 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        max-width: 1880px;
         margin: 10px auto;
+        overflow: hidden;
       }
       
       .grid-style-3 .left-banner {
         grid-row: span 2;
-      }
-      
-      .grid-style-3 .left-banner .banner-link {
-        aspect-ratio: 1/1;
+        min-width: 0; /* Prevent content from pushing container width */
       }
       
       .grid-style-3 .right-stack {
         display: grid;
         gap: 20px;
+        min-width: 0; /* Prevent content from pushing container width */
       }
-      
-      .grid-style-3 .right-stack .banner-link {
-        aspect-ratio: 930/455;
+
+      .grid-style-3 .banner-link {
+        min-width: 0; /* Prevent content from pushing container width */
       }
       
       /* Style 4 - Left Stack Right Banner (Adjusted) */
@@ -269,7 +323,6 @@
         display: grid;
         grid-template-columns: 1fr 1.5fr; /* Adjusted ratio to match visual proportions */
         gap: 20px;
-        max-width: 1880px;
         margin: 10px auto;
       }
       
@@ -317,6 +370,89 @@
         .grid-style-4 .right-banner {
           max-width: 100%;
         }
+      }
+
+      /* Style 5 - Five Grid Layout */
+      .grid-style-5 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 1880px;
+        overflow: hidden;
+      }
+
+      .grid-style-5 .left-stack,
+      .grid-style-5 .right-stack {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        min-width: 0; /* Prevent content from pushing container width */
+      }
+
+      .grid-style-5 .banner-link {
+        min-width: 0; /* Prevent content from pushing container width */
+      }
+
+      .grid-style-5 .center-banner {
+        width: 100%;
+        margin: 0 auto;
+        aspect-ratio: 1/1;
+      }
+
+      .grid-style-5 .left-stack .banner-link,
+      .grid-style-5 .right-stack .banner-link {
+        aspect-ratio: 1/1;
+        width: 100%;
+        display: block;
+      }
+
+      .grid-style-5 .center-banner .banner-link {
+        aspect-ratio: 1/1;
+        width: 100%;
+        display: block;
+      }
+
+      .grid-style-5 .banner-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 767px) {
+        .grid-style-5 {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        
+        .grid-style-5 .left-stack,
+        .grid-style-5 .right-stack,
+        .grid-style-5 .center-banner {
+          width: 100%;
+        }
+        
+        .grid-style-5 .left-stack .banner-link,
+        .grid-style-5 .right-stack .banner-link,
+        .grid-style-5 .center-banner .banner-link {
+          width: 100%;
+          aspect-ratio: 1/1;
+        }
+
+        .grid-style-5 .banner-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      /* Common container styles */
+      .grid-style-1,
+      .grid-style-2,
+      .grid-style-3,
+      .grid-style-4,
+      .grid-style-5 {
+        max-width: 1800px;
       }
 </style>
 
@@ -574,6 +710,120 @@
                   loading="lazy"
                   width="1068"
                   height="700"
+                />
+              {% endif %}
+            </div>
+          </div>
+
+        {% when 'style_5' %}
+          <div class="grid-style-5" {{ block.shopify_attributes }}>
+            <div class="left-stack">
+              {% if block.settings.image_1 %}
+                <a href="{{ block.settings.link_1 }}" class="banner-link">
+                  {{ block.settings.image_1 | image_url: width: 460, height: 460, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 460,
+                    height: 460,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 460px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/460x460/808080/000000.jpg&text=+460+x+460"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="460"
+                  height="460"
+                />
+              {% endif %}
+
+              {% if block.settings.image_2 %}
+                <a href="{{ block.settings.link_2 }}" class="banner-link">
+                  {{ block.settings.image_2 | image_url: width: 460, height: 460, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 460,
+                    height: 460,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 460px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/460x460/808080/000000.jpg&text=+460+x+460"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="460"
+                  height="460"
+                />
+              {% endif %}
+            </div>
+
+            <div class="center-banner">
+              {% if block.settings.image_3 %}
+                <a href="{{ block.settings.link_3 }}" class="banner-link">
+                  {{ block.settings.image_3 | image_url: width: 930, height: 930, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 930,
+                    height: 930,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 930px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/930x930/808080/000000.jpg&text=+930+x+930"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="930"
+                  height="930"
+                />
+              {% endif %}
+            </div>
+
+            <div class="right-stack">
+              {% if block.settings.image_4 %}
+                <a href="{{ block.settings.link_4 }}" class="banner-link">
+                  {{ block.settings.image_4 | image_url: width: 460, height: 460, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 460,
+                    height: 460,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 460px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/460x460/808080/000000.jpg&text=+460+x+460"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="460"
+                  height="460"
+                />
+              {% endif %}
+
+              {% if block.settings.image_5 %}
+                <a href="{{ block.settings.link_5 }}" class="banner-link">
+                  {{ block.settings.image_5 | image_url: width: 460, height: 460, crop: 'center' | image_tag:
+                    loading: 'lazy',
+                    width: 460,
+                    height: 460,
+                    class: 'banner-image',
+                    sizes: '(min-width: 768px) 460px, 100vw'
+                  }}
+                </a>
+              {% else %}
+                <img 
+                  src="https://dummyimage.com/460x460/808080/000000.jpg&text=+460+x+460"
+                  alt="Placeholder image"
+                  class="banner-image"
+                  loading="lazy"
+                  width="460"
+                  height="460"
                 />
               {% endif %}
             </div>
