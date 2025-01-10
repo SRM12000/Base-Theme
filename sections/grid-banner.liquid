@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Custom Grid Section",
+  "name": "Multi Grid Section",
   "tag": "section",
   "class": "grid-section",
   "settings": [
@@ -29,7 +29,13 @@
         }
       ],
       "default": "padding-md"
-    }
+    },
+    {
+        "type": "checkbox",
+        "id": "animations_reveal_on_scroll",
+        "label": "Enable Scroll-Reveal Animation",
+        "default": true
+      }
   ],
   "blocks": [
     {
@@ -56,6 +62,216 @@
           "type": "url",
           "id": "link_2",
           "label": "Second Image Link"
+        },
+        {
+          "type": "header",
+          "content": "First Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_1",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_1",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_1",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_1",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_1",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_1",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_1",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_1",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_1",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Second Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_2",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_2",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_2",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_2",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_2",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_2",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_2",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_2",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_2",
+          "label": "Background Color",
+          "default": "#000000"
         }
       ]
     },
@@ -93,6 +309,321 @@
           "type": "url",
           "id": "link_3",
           "label": "Third Image Link"
+        },
+        {
+          "type": "header",
+          "content": "First Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_1",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_1",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_1",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_1",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_1",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_1",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_1",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_1",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_1",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Second Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_2",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_2",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_2",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_2",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_2",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_2",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_2",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_2",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_2",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Third Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_3",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_3",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_3",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_3",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_3",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_3",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_3",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_3",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_3",
+          "label": "Background Color",
+          "default": "#000000"
         }
       ]
     },
@@ -130,6 +661,321 @@
           "type": "url",
           "id": "link_3",
           "label": "Bottom Right Image Link"
+        },
+        {
+          "type": "header",
+          "content": "First Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_1",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_1",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_1",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_1",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_1",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_1",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_1",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_1",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_1",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Second Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_2",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_2",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_2",
+          "label": "Overlay Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_2",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_2",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_2",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_2",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_2",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_2",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Third Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_3",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_3",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_3",
+          "label": "Overlay Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_3",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_3",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_3",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_3",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_3",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_3",
+          "label": "Background Color",
+          "default": "#000000"
         }
       ]
     },
@@ -167,6 +1013,321 @@
           "type": "url",
           "id": "link_3",
           "label": "Right Image Link"
+        },
+        {
+          "type": "header",
+          "content": "First Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_1",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_1",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_1",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_1",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_1",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_1",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_1",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_1",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_1",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Second Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_2",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_2",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_2",
+          "label": "Overlay Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_2",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_2",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_2",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_2",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_2",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_2",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Third Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_3",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_3",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_3",
+          "label": "Overlay Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_3",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_3",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_3",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_3",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_3",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_3",
+          "label": "Background Color",
+          "default": "#000000"
         }
       ]
     },
@@ -224,13 +1385,538 @@
           "type": "url",
           "id": "link_5",
           "label": "Right Bottom Image Link"
+        },
+        {
+          "type": "header",
+          "content": "First Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_1",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_1",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_1",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_1",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_1",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_1",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_1",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_1",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_1",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Second Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_2",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_2",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_2",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_2",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_2",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_2",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_2",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_2",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_2",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Third Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_3",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_3",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_3",
+          "label": "Overlay Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_3",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_3",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_3",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_3",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_3",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_3",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Fourth Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_4",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_4",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_4",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_4",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_4",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_4",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_4",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_4",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_4",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Fifth Image Overlay"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_5",
+          "label": "Main Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_subheading_5",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text_5",
+          "label": "Additional Text"
+        },
+        {
+          "type": "range",
+          "id": "overlay_width_5",
+          "min": 100,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Width",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "overlay_height_5",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Overlay Height",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity_5",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "overlay_position_5",
+          "label": "Overlay Position",
+          "options": [
+            {
+              "value": "align-top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "align-top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "align-top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "align-center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "align-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "align-bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "align-bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "align-bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "align-bottom-center"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color_5",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background_5",
+          "label": "Background Color",
+          "default": "#000000"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Custom Grid Gallery",
+      "name": "Multi Grid Gallery",
       "blocks": [
         {
           "type": "style_1"
@@ -454,10 +2140,139 @@
       .grid-style-5 {
         max-width: 1800px;
       }
+
+      .banner-link {
+        position: relative;
+      }
+
+      .banner-text-overlay {
+        position: absolute;
+        background-color: var(--overlay-background);
+        color: var(--overlay-text-color, #000000);
+        padding: 20px;
+        width: var(--overlay-width, auto);
+        height: var(--overlay-height, auto);
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        word-wrap: break-word;
+        min-height: 120px;
+        box-sizing: border-box;
+      }
+
+      .banner-text-overlay .heading,
+      .banner-text-overlay .subtext {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        line-height: 1.2;
+        margin: 0;
+        padding: 2px 0;
+      }
+
+      .banner-text-overlay .heading {
+        font-size: clamp(16px, 1.5vw, 24px);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .banner-text-overlay .subtext {
+        font-size: clamp(14px, 1.2vw, 18px);
+      }
+
+      /* Add responsive adjustments */
+      @media screen and (max-width: 767px) {
+        .banner-text-overlay {
+          padding: 15px;
+          min-height: 100px;
+          gap: 3px;
+        }
+
+        .banner-text-overlay .heading {
+          font-size: 16px;
+          padding: 1px 0;
+        }
+
+        .banner-text-overlay .subtext {
+          font-size: 14px;
+          padding: 1px 0;
+        }
+      }
+
+      /* Add specific class for three-line layout */
+      .banner-text-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .banner-text-overlay > div {
+        flex-shrink: 0;
+      }
+
+      /* Alignment classes */
+      .align-top-left {
+        top: 20px;
+        left: 20px;
+      }
+      
+      .align-top-center {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .align-top-right {
+        top: 20px;
+        right: 20px;
+      }
+      
+      .align-center-left {
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+      }
+      
+      .align-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .align-center-right {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+      
+      .align-bottom-left {
+        bottom: 20px;
+        left: 20px;
+      }
+      
+      .align-bottom-center {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .align-bottom-right {
+        bottom: 20px;
+        right: 20px;
+      }
 </style>
 
-<div class="grid-section {{ section.settings.section_padding }}">
-  <div class="grid-container">
+
+<div class="grid-section  {{ section.settings.section_padding }}">
+  <div class="grid-container ">
     {% if section.settings.section_heading != blank %}
       <h2 class="grid-heading">{{ section.settings.section_heading }}</h2>
     {% endif %}
@@ -465,7 +2280,7 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'style_1' %}
-          <div class="grid-style-1" {{ block.shopify_attributes }}>
+          <div class="grid-style-1 {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
             {% if block.settings.image_1 %}
               <a href="{{ block.settings.link_1 }}" class="banner-link">
                 {{ block.settings.image_1 | image_url: width: 930, height: 620, crop: 'center' | image_tag:
@@ -475,6 +2290,27 @@
                   class: 'banner-image',
                   sizes: '(min-width: 768px) 50vw, 100vw'
                 }}
+                {% if block.settings.overlay_heading_1 != blank %}
+                  <div class="banner-text-overlay {{ block.settings.overlay_position_1 }}"
+                    style="
+                      --overlay-width: {{ block.settings.overlay_width_1 }}px;
+                      --overlay-height: {{ block.settings.overlay_height_1 }}px;
+                      --overlay-text-color: {{ block.settings.overlay_text_color_1 }};
+                      --overlay-background: rgba({{ block.settings.overlay_background_1 | color_extract: 'red' }}, 
+                                              {{ block.settings.overlay_background_1 | color_extract: 'green' }}, 
+                                              {{ block.settings.overlay_background_1 | color_extract: 'blue' }}, 
+                                              {{ block.settings.overlay_opacity_1 | divided_by: 100.0 }});
+                    "
+                  >
+                    <div class="heading">{{ block.settings.overlay_heading_1 }}</div>
+                    {% if block.settings.overlay_subheading_1 != blank %}
+                      <div class="heading">{{ block.settings.overlay_subheading_1 }}</div>
+                    {% endif %}
+                    {% if block.settings.overlay_text_1 != blank %}
+                      <div class="subtext">{{ block.settings.overlay_text_1 }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
               </a>
             {% else %}
               <img 
@@ -496,6 +2332,28 @@
                   class: 'banner-image',
                   sizes: '(min-width: 768px) 50vw, 100vw'
                 }}
+                {% if block.settings.overlay_heading_2 != blank %}
+                  <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                    style="
+                      --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                      --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                      --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                      --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                      --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                              {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                              {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                              {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                    "
+                  >
+                    <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                    {% if block.settings.overlay_subheading_2 != blank %}
+                      <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                    {% endif %}
+                    {% if block.settings.overlay_text_2 != blank %}
+                      <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
               </a>
             {% else %}
               <img 
@@ -506,11 +2364,33 @@
                 width="930"
                 height="620"
               />
+              {% if block.settings.overlay_heading_2 != blank %}
+                <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                  style="
+                    --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                    --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                    --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                    --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                    --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                            {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                            {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                            {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                  "
+                >
+                  <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                  {% if block.settings.overlay_subheading_2 != blank %}
+                    <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                  {% endif %}
+                  {% if block.settings.overlay_text_2 != blank %}
+                    <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                  {% endif %}
+                </div>
+              {% endif %}
             {% endif %}
           </div>
 
         {% when 'style_2' %}
-          <div class="grid-style-2" {{ block.shopify_attributes }}>
+          <div class="grid-style-2 {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
             {% if block.settings.image_1 %}
               <a href="{{ block.settings.link_1 }}" class="banner-link">
                 {{ block.settings.image_1 | image_url: width: 640, height: 640, crop: 'center' | image_tag:
@@ -520,6 +2400,27 @@
                   class: 'banner-image',
                   sizes: '(min-width: 768px) 33vw, 100vw'
                 }}
+                {% if block.settings.overlay_heading_1 != blank %}
+                  <div class="banner-text-overlay {{ block.settings.overlay_position_1 }}"
+                    style="
+                      --overlay-width: {{ block.settings.overlay_width_1 }}px;
+                      --overlay-height: {{ block.settings.overlay_height_1 }}px;
+                      --overlay-text-color: {{ block.settings.overlay_text_color_1 }};
+                      --overlay-background: rgba({{ block.settings.overlay_background_1 | color_extract: 'red' }}, 
+                                              {{ block.settings.overlay_background_1 | color_extract: 'green' }}, 
+                                              {{ block.settings.overlay_background_1 | color_extract: 'blue' }}, 
+                                              {{ block.settings.overlay_opacity_1 | divided_by: 100.0 }});
+                    "
+                  >
+                    <div class="heading">{{ block.settings.overlay_heading_1 }}</div>
+                    {% if block.settings.overlay_subheading_1 != blank %}
+                      <div class="heading">{{ block.settings.overlay_subheading_1 }}</div>
+                    {% endif %}
+                    {% if block.settings.overlay_text_1 != blank %}
+                      <div class="subtext">{{ block.settings.overlay_text_1 }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
               </a>
             {% else %}
               <img 
@@ -541,6 +2442,28 @@
                   class: 'banner-image',
                   sizes: '(min-width: 768px) 33vw, 100vw'
                 }}
+                {% if block.settings.overlay_heading_2 != blank %}
+                  <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                    style="
+                      --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                      --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                      --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                      --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                      --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                              {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                              {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                              {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                    "
+                  >
+                    <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                    {% if block.settings.overlay_subheading_2 != blank %}
+                      <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                    {% endif %}
+                    {% if block.settings.overlay_text_2 != blank %}
+                      <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
               </a>
             {% else %}
               <img 
@@ -562,6 +2485,28 @@
                   class: 'banner-image',
                   sizes: '(min-width: 768px) 33vw, 100vw'
                 }}
+                {% if block.settings.overlay_heading_3 != blank %}
+                  <div class="banner-text-overlay {{ block.settings.overlay_position_3 }}"
+                    style="
+                      --overlay-width: {{ block.settings.overlay_width_3 }}px;
+                      --overlay-height: {{ block.settings.overlay_height_3 }}px;
+                      --overlay-opacity: {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }};
+                      --overlay-text-color: {{ block.settings.overlay_text_color_3 }};
+                      --overlay-background: rgba({{ block.settings.overlay_background_3 | color_extract: 'red' }}, 
+                                              {{ block.settings.overlay_background_3 | color_extract: 'green' }}, 
+                                              {{ block.settings.overlay_background_3 | color_extract: 'blue' }}, 
+                                              {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }});
+                    "
+                  >
+                    <div class="heading">{{ block.settings.overlay_heading_3 }}</div>
+                    {% if block.settings.overlay_subheading_3 != blank %}
+                      <div class="heading">{{ block.settings.overlay_subheading_3 }}</div>
+                    {% endif %}
+                    {% if block.settings.overlay_text_3 != blank %}
+                      <div class="subtext">{{ block.settings.overlay_text_3 }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
               </a>
             {% else %}
               <img 
@@ -576,7 +2521,7 @@
           </div>
 
         {% when 'style_3' %}
-          <div class="grid-style-3" {{ block.shopify_attributes }}>
+          <div class="grid-style-3 {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
             <div class="left-banner">
               {% if block.settings.image_1 %}
                 <a href="{{ block.settings.link_1 }}" class="banner-link">
@@ -587,6 +2532,27 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 50vw, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_1 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_1 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_1 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_1 }}px;
+                        --overlay-text-color: {{ block.settings.overlay_text_color_1 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_1 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_1 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_1 }}</div>
+                      {% if block.settings.overlay_subheading_1 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_1 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_1 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_1 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -610,6 +2576,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 50vw, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_2 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                      {% if block.settings.overlay_subheading_2 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_2 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -631,6 +2619,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 50vw, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_3 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_3 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_3 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_3 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_3 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_3 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_3 }}</div>
+                      {% if block.settings.overlay_subheading_3 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_3 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_3 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_3 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -646,7 +2656,7 @@
           </div>
 
         {% when 'style_4' %}
-          <div class="grid-style-4" {{ block.shopify_attributes }}>
+          <div class="grid-style-4 {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
             <div class="left-stack">
               {% if block.settings.image_1 %}
                 <a href="{{ block.settings.link_1 }}" class="banner-link">
@@ -657,6 +2667,27 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 712px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_1 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_1 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_1 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_1 }}px;
+                        --overlay-text-color: {{ block.settings.overlay_text_color_1 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_1 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_1 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_1 }}</div>
+                      {% if block.settings.overlay_subheading_1 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_1 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_1 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_1 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -678,6 +2709,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 712px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_2 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                      {% if block.settings.overlay_subheading_2 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_2 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -701,6 +2754,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 1068px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_3 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_3 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_3 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_3 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_3 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_3 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_3 }}</div>
+                      {% if block.settings.overlay_subheading_3 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_3 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_3 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_3 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -716,7 +2791,7 @@
           </div>
 
         {% when 'style_5' %}
-          <div class="grid-style-5" {{ block.shopify_attributes }}>
+          <div class="grid-style-5 {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
             <div class="left-stack">
               {% if block.settings.image_1 %}
                 <a href="{{ block.settings.link_1 }}" class="banner-link">
@@ -727,6 +2802,27 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 460px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_1 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_1 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_1 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_1 }}px;
+                        --overlay-text-color: {{ block.settings.overlay_text_color_1 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_1 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_1 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_1 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_1 }}</div>
+                      {% if block.settings.overlay_subheading_1 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_1 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_1 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_1 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -748,6 +2844,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 460px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_2 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_2 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_2 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_2 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_2 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_2 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_2 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_2 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_2 }}</div>
+                      {% if block.settings.overlay_subheading_2 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_2 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_2 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_2 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -771,6 +2889,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 930px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_3 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_3 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_3 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_3 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_3 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_3 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_3 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_3 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_3 }}</div>
+                      {% if block.settings.overlay_subheading_3 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_3 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_3 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_3 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -794,6 +2934,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 460px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_4 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_4 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_4 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_4 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_4 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_4 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_4 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_4 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_4 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_4 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_4 }}</div>
+                      {% if block.settings.overlay_subheading_4 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_4 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_4 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_4 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
@@ -815,6 +2977,28 @@
                     class: 'banner-image',
                     sizes: '(min-width: 768px) 460px, 100vw'
                   }}
+                  {% if block.settings.overlay_heading_5 != blank %}
+                    <div class="banner-text-overlay {{ block.settings.overlay_position_5 }}"
+                      style="
+                        --overlay-width: {{ block.settings.overlay_width_5 }}px;
+                        --overlay-height: {{ block.settings.overlay_height_5 }}px;
+                        --overlay-opacity: {{ block.settings.overlay_opacity_5 | divided_by: 100.0 }};
+                        --overlay-text-color: {{ block.settings.overlay_text_color_5 }};
+                        --overlay-background: rgba({{ block.settings.overlay_background_5 | color_extract: 'red' }}, 
+                                                {{ block.settings.overlay_background_5 | color_extract: 'green' }}, 
+                                                {{ block.settings.overlay_background_5 | color_extract: 'blue' }}, 
+                                                {{ block.settings.overlay_opacity_5 | divided_by: 100.0 }});
+                      "
+                    >
+                      <div class="heading">{{ block.settings.overlay_heading_5 }}</div>
+                      {% if block.settings.overlay_subheading_5 != blank %}
+                        <div class="heading">{{ block.settings.overlay_subheading_5 }}</div>
+                      {% endif %}
+                      {% if block.settings.overlay_text_5 != blank %}
+                        <div class="subtext">{{ block.settings.overlay_text_5 }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </a>
               {% else %}
                 <img 
